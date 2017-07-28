@@ -1,16 +1,13 @@
-// document.getElementById('get-joke').addEventListener("load", getJoke; 
-// ?? pokazanie dowcipu razem z załadowaniem strony?? not working
-
 var url = 'http://api.icndb.com/jokes/random';
 
-var button = document.getElementById('get-joke');  // przycisk
-button.addEventListener('click', function(){  // nasłuchiwanie
+var button = document.getElementById('get-joke');
+button.addEventListener('click', function(){
   getJoke(); 
 });
 
 var paragraph = document.getElementById('joke');
 
-function getJoke() {  // pobranie dowcipu
+function getJoke() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.addEventListener('load', function(){
@@ -23,3 +20,5 @@ function getJoke() {  // pobranie dowcipu
 	  console.log('rtt');
   }
 }
+
+getJoke();
